@@ -143,3 +143,21 @@
   bottom: -4px ;
   transform: rotate(45deg);
 }
+
+.arrow-container{
+  width: 70px;
+  height: 70px; 
+  position:relative; 
+  border-radius: 10px;
+  background: #f1f3f7;
+  box-shadow:  5px 5px 10px #cdcfd2, 
+             -5px -5px 10px #ffffff;
+}
+.arrow-right{
+  position: absolute; 
+  left: 25px;
+  top: 20px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid #4ccef2;
+}
