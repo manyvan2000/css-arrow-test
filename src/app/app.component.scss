@@ -1,6 +1,7 @@
 .container {
   background-color: #f1f3f7;
   height: 3000px;
+  // margin:auto;
 }
 .inner-circle {
   position:absolute; 
@@ -21,6 +22,7 @@
   height: 200px;
   width: 200px; 
   border-radius: 50%;
+  margin:auto;
   // background: #f1f3f7;
   box-shadow:  7px 7px 14px #cdcfd2, 
              -7px -7px 14px #ffffff;
@@ -60,10 +62,12 @@
 }
 
 .gear{
-  position: relative;
+  position: absolute;
   width: 20px;
   height: 20px;
   // margin: auto;
+  top: 15px;
+  left: 15px;
   background: #4ccef2;
   border-radius: 50%;
 /*   animation-name: spin; */
@@ -110,38 +114,73 @@
   from {transform: rotate(0deg); }
   to {transform: rotate(360deg);}
 }
-
-.pencil-container, .gear-container {
-  height: 50px;
-  margin-left: 25px;
-  margin-top: 50px; 
+.gear-container {
   position: relative; 
+  width: 50px;
+  height: 50px;
+  margin: 25px; 
+  float: right;
+  border-radius: 50%;
+  background: #f1f3f7;
+  box-shadow:  5px 5px 10px #cdcfd2, 
+             -5px -5px 10px #ffffff;
+}
+
+
+.pencil-container-inner {
+  position: absolute; 
+  width: 50px;
+  height: 50px;
+  // margin: 25px;
+  
+  top: 15px; 
+  left:15px; 
+  border-radius: 50%;
+  background: #f1f3f7;
+  box-shadow:  5px 5px 10px #cdcfd2, 
+             -5px -5px 10px #ffffff;
+}
+
+.pencil-container-outer{
+  position: absolute;
+  bottom: -50px;
+  left: -25px;  
+  width: 80px;
+  height: 80px;
+  margin: 25px;
+  // margin:auto;
+  border-radius: 50%;
+  background: #f1f3f7;
+  box-shadow:  5px 5px 10px #cdcfd2, 
+             -5px -5px 10px #ffffff;
 }
 
 .pencil {
-  width: 10px ;
-  height: 30px ;
+  width: 6px ;
+  height: 20px ;
   background: #4ccef2 ;
-  position: relative ;
+  top: 20px; 
+  left: 20px;
+  position: absolute ;
   transform: rotate(30deg);
 }
 .pencil::before {
   content: "" ;
   position: absolute ;
-  width: 10px ;
-  height: 10px ;
+  width: 6px ;
+  height: 6px ;
   background: #4ccef2 ;
-  top: -13px ;
+  top: -7px ;
 }
 .pencil::after {
-  content: "" ;
-  position: absolute ;
-  width: 8px ;
-  height: 8px ;
-  background: #4ccef2 ;
-  left: 1px ;
-  bottom: -4px ;
-  transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #4ccef2;
+    left: 1px;
+    bottom: -2px;
+    transform: rotate(45deg);
 }
 
 .arrow-container{
@@ -149,6 +188,9 @@
   height: 70px; 
   position:relative; 
   border-radius: 10px;
+  margin-left:50px;
+  margin-top: 50px;
+  // margin:auto;
   background: #f1f3f7;
   box-shadow:  5px 5px 10px #cdcfd2, 
              -5px -5px 10px #ffffff;
@@ -160,4 +202,10 @@
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 25px solid #4ccef2;
+}
+
+.gear-bar{
+  height: 70px; 
+  width: 100%;
+  background: #f1f3f7;
 }
