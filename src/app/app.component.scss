@@ -54,3 +54,63 @@
               inset -21px -21px 42px #5af2ff;
   clip-path: ellipse(62px 51px at 49px 25px);
 }
+
+/* body{background:fff;} */
+
+.parent{
+  display: flex;
+  height: 500px;
+}
+
+.gear{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  background: #198;
+  border-radius: 50%;
+/*   animation-name: spin; */
+  // animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.gear .center{
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background: #198;
+  border-radius: 50%;
+}
+
+.tooth{
+  position: absolute;
+  top: -2px;
+  left: 7px;
+  z-index: 1;
+  width: 5px;
+  height: 25px;
+/*   background:#fff; */
+  background: #198;
+}
+
+.tooth:nth-child(2){
+  transform: rotate(45deg);
+}
+
+.tooth:nth-child(3){
+  transform: rotate(90deg);
+}
+
+.tooth:nth-child(4){
+  transform: rotate(135deg);
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg); }
+  to {transform: rotate(360deg);}
+}
+
